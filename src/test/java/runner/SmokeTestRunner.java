@@ -8,13 +8,17 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions
                   (                    
-		
+		         
+     	  
+                		  
 		         features="src/test/resources/Business_Logic",
-		         tags="@SmokeTest",
+		         tags="@RegressionTest",
+		         monochrome=true,
+		         plugin="pretty",
 		         glue="cucumbermap"
 		  
                 		)
-
+                                                                        
                   
 
 
