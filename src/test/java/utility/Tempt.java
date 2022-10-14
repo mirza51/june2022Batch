@@ -54,26 +54,36 @@ public class Tempt {
 	     Thread.sleep(2000);
 		    driver.findElementByXPath("(//*[@type='text'])[2]").sendKeys("asad");
 	     //MOBILENUMBER
-		    driver.findElementByName("phone").sendKeys("8149524177");
+		    //driver.findElementByName("phone").sendKeys("8149524177");
+		    driver.findElementByXPath("(//*[@type='text'])[3]").sendKeys("8149524177");
 	    //ENTER PIN CODE
-		    driver.findElementByName("pincode").sendKeys("414001");
+		    //driver.findElementByName("pincode").sendKeys("414001");
+		    driver.findElementByXPath("//*[@tabindex='3']").sendKeys("414001");
 	     //ENTER LOCALITY
-		     driver.findElementByName("addressLine2").sendKeys("nagar");
+		     //driver.findElementByName("addressLine2").sendKeys("nagar");
+		    driver.findElementByXPath("//*[@tabindex='4']").sendKeys("nagar");
 	    //ENTER ADDRESS NERA STREET
-		    driver.findElementByName("addressLine1").sendKeys("near inam masjid");
+		    //driver.findElementByName("addressLine1").sendKeys("near inam masjid");
+		    driver.findElementByXPath("//*[@rows='4']").sendKeys("near inam masjid");
 	     //CITY AND DISTRICT
 		    Thread.sleep(2000);
 	   driver.findElement(By.xpath("//*[@name='landmark']")).sendKeys("ahmednagar");
 	     //ENTER LADNMARK
-	       driver.findElementByName("landmark").sendKeys("near inam masjid");
+	      // driver.findElementByName("landmark").sendKeys("near inam masjid");
+	          driver.findElementByXPath("(//*[@tabindex='8'])").sendKeys("near inam masjid");
+	   
 	     //ALTERNATE NUMBER
 		   driver.findElementByXPath("(//input[@type='text'])[8]").sendKeys("9822688347");
 	     //CLICK ON RADION BUTTON 
-		    driver.findElementByClassName("_1XFPmK").click();
+		    //driver.findElementByClassName("_1XFPmK").click();
+		    driver.findElementByXPath("//*[@class='_1XFPmK'][1]").click();
 	     //CLICK ON SAVE BUTTONE
-		   driver.findElement(By.xpath("//*[@type='button'][2]")).click();
-	    
-	    
+		   //driver.findElement(By.xpath("//*[@type='button'][2]")).click();
+	       driver.findElementByXPath("(//*[@tabindex='10'])").click();
+	    //ADD ADDED SUCESFULY
+	       driver.findElementByXPath("(//*[@class='_26SF1Q'])").click();
+	       
+	       
 	}
 	
 		

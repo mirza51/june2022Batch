@@ -46,7 +46,7 @@ public void user_send_as_name(String name) throws Throwable {
 public void user_send_as_number(String number) throws Throwable {
    
 	Object[] input12=new Object[2];
-	input12[0]="phone";
+	input12[0]="(//*[@type='text'])[3]";
 	input12[1]=number;
 	Hashtable<String, Object> output12=SeleniumOperations.sendText(input12);
 	HTMLReportGenerator.StepDetails(output12.get("STATUS").toString(),"^user send \"([^\"]*)\" as number$", output12.get("MESSAGE").toString());
@@ -59,7 +59,7 @@ public void user_send_as_pinCode(String pinCode) throws Throwable {
    
 	 
 		Object[] input13=new Object[2];
-		input13[0]="pincode";
+		input13[0]="//*[@tabindex='3']";
 		input13[1]=pinCode;
 		Hashtable<String, Object> output13=SeleniumOperations.sendText(input13);
 		HTMLReportGenerator.StepDetails(output13.get("STATUS").toString(),"^user send \"([^\"]*)\" as pinCode$", output13.get("MESSAGE").toString());
@@ -70,7 +70,7 @@ public void user_send_as_pinCode(String pinCode) throws Throwable {
 public void user_send_as_locality(String locality) throws Throwable {
 	
 	Object[] input14=new Object[2];
-	input14[0]="addressLine2";
+	input14[0]="//*[@tabindex='4']";
 	input14[1]=locality;
 	Hashtable<String, Object> output14=SeleniumOperations.sendText(input14);
 	HTMLReportGenerator.StepDetails(output14.get("STATUS").toString(),"^user send \"([^\"]*)\" as locality$", output14.get("MESSAGE").toString());
@@ -81,7 +81,7 @@ public void user_send_as_locality(String locality) throws Throwable {
 public void user_send_as_address(String near) throws Throwable {
     Thread.sleep(8000);
 	Object[] input15=new Object[2];
-	input15[0]="addressLine1";
+	input15[0]="//*[@rows='4']";
 	input15[1]=near;
 	Hashtable<String, Object> output15=SeleniumOperations.sendText(input15);
 	HTMLReportGenerator.StepDetails(output15.get("STATUS").toString(),"^user send \"([^\"]*)\" as address$", output15.get("MESSAGE").toString());
@@ -105,7 +105,7 @@ public void user_send_as_city(String city) throws Throwable {
 public void user_send_as_landmark(String mark) throws Throwable {
 	
 	Object[] input17=new Object[2];
-	input17[0]="landmark";
+	input17[0]="(//*[@tabindex='8'])";
 	input17[1]=mark;
 	Hashtable<String, Object> output17=SeleniumOperations.sendText(input17);
 	HTMLReportGenerator.StepDetails(output17.get("STATUS").toString(),"^user send \"([^\"]*)\" as landmark$", output17.get("MESSAGE").toString());
@@ -130,7 +130,7 @@ public void user_send_as_alternate_phone_number(String alter) throws Throwable {
 public void user_click_on_radio_buttone() throws Throwable {
     Thread.sleep(8000);
 	Object[] input19=new Object[1];
-	input19[0]="_1XFPmK";
+	input19[0]="//*[@class='_1XFPmK'][1]";
 	Hashtable<String, Object> output19=SeleniumOperations.clickOnElement(input19);
 	HTMLReportGenerator.StepDetails(output19.get("STATUS").toString(), "^user click on radio buttone$", output19.get("MESSAGE").toString());
 	
@@ -141,7 +141,7 @@ public void user_click_on_radio_buttone() throws Throwable {
 public void user_click_on_save_buttone() throws Throwable {
     
 	Object[] input20=new Object[1];
-	input20[0]="_1XFPmK";
+	input20[0]="(//*[@tabindex='10'])";
 	Hashtable<String, Object> output20=SeleniumOperations.clickOnElement(input20);
 	HTMLReportGenerator.StepDetails(output20.get("STATUS").toString(), "^user click on save buttone$", output20.get("MESSAGE").toString());
 
@@ -151,7 +151,7 @@ public void user_click_on_save_buttone() throws Throwable {
 @Then("^address added successfuly$")
 public void address_added_successfuly() throws Throwable {
 	Object[] input21=new Object[1];
-	input21[0]="//*[@type='button'][2]";
+	input21[0]="(//*[@class='_26SF1Q'])";
 	Hashtable<String, Object> output21=SeleniumOperations.clickOnElement(input21);
 	HTMLReportGenerator.StepDetails(output21.get("STATUS").toString(), "^address added successfuly$", output21.get("MESSAGE").toString());
 
